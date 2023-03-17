@@ -8,7 +8,7 @@ import {
   Delete,
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { CreateAuthDto } from './dto/create-auth.dto';
+import { CreateAuthDto, CreateTokenDto } from './dto/create-auth.dto';
 import { UpdateAuthDto } from './dto/update-auth.dto';
 
 @Controller('auth')
@@ -19,7 +19,10 @@ export class AuthController {
   create(@Body() createAuthDto: CreateAuthDto) {
     return this.authService.create(createAuthDto);
   }
-
+  // @Post('token')
+  // generate(@Body() createToken: CreateTokenDto) {
+  //   return this.authService.createJwtToken(createToken);
+  // }
   @Get()
   fetchAllList() {
     return this.authService.fetchAllList();

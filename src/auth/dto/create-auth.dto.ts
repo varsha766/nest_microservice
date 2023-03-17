@@ -12,3 +12,13 @@ export class CreateAuthDto {
   @IsEmail()
   email: string;
 }
+
+export class CreateTokenDto {
+  @IsString()
+  @IsNotEmpty()
+  userId: string;
+  @IsString()
+  @IsNotEmpty()
+  @IsEmail()
+  email: string;
+}
