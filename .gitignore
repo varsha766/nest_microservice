@@ -17,7 +17,7 @@ lerna-debug.log*
 # env
 .env
 yarn.lock
-
+cert
 # Tests
 /coverage
 /.nyc_output
